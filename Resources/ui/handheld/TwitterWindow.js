@@ -29,7 +29,7 @@ function TwitterWindow(tabGroup, target) {
     
     // インジケータ
     var indicator = Ti.UI.createActivityIndicator({
-        style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+        style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
     });
     self.add(indicator);
     
@@ -197,7 +197,7 @@ function TwitterWindow(tabGroup, target) {
         Ti.API.info('web=' + web);
         win.add(web);
         var webIndicator = Ti.UI.createActivityIndicator({
-            style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+            style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
         });
         win.add(webIndicator);
         webIndicator.show();
@@ -273,7 +273,7 @@ function TwitterWindow(tabGroup, target) {
       
     var actInd = Ti.UI.createActivityIndicator({
         /*left:20,*/ bottom:13
-        ,style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+        ,style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
     });
     tableHeader.add(actInd);
     listView.pullView = tableHeader; 
@@ -292,7 +292,7 @@ function TwitterWindow(tabGroup, target) {
     function load(kind) {
         if(util.isAndroid() && ("older" == kind || "newer" == kind)) {
             indicator = Ti.UI.createActivityIndicator({
-            	style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+            	style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
             	});
             self.add(indicator);
             Ti.API.info('indicator.show()');

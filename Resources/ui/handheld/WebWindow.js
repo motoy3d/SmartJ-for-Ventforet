@@ -184,7 +184,7 @@ function WebWindow(webData, callback) {
 //                webView.add(ind);
 //TODO style
                 ind = Ti.UI.createActivityIndicator({
-                    style:Ti.UI.ActivityIndicatorStyle.DARK
+                    style:Ti.UI.ActivityIndicatorStyle.PLAIN
                 });
                 webView.add(ind);
                 ind.show();

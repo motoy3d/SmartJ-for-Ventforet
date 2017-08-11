@@ -81,7 +81,7 @@ function NewsWindow(tabGroup, teamId, teamName) {
     
     // インジケータ
     var indicator = Ti.UI.createActivityIndicator({
-    	style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+    	style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
     });
     self.add(indicator);
     indicator.show();
@@ -277,7 +277,7 @@ function NewsWindow(tabGroup, teamId, teamName) {
       
     var actInd = Ti.UI.createActivityIndicator({
         /*left:20,*/ bottom:13
-        ,style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+        ,style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
     });
     listViewHeader.add(actInd);
     listView.pullView = listViewHeader; 
@@ -298,7 +298,7 @@ function NewsWindow(tabGroup, teamId, teamName) {
     function loadFeed(news, kind) {
         if(util.isAndroid() && ("olderEntries" == kind || "newerEntries" == kind)) {
             indicator = Ti.UI.createActivityIndicator({
-            	style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.BIG
+            	style: util.isiOS()? Ti.UI.ActivityIndicatorStyle.PLAIN : Ti.UI.ActivityIndicatorStyle.BIG
         	});
             self.add(indicator);
             indicator.show();
